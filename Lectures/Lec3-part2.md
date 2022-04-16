@@ -27,7 +27,7 @@ OS的防御性是指，抵御来自**应用程序对OS**的攻击，同时要防
 >
 > A：处理器中有一个flag，是处理器中的一个bit。当处理器解析指令时，如果指令为特殊权限指令且该bit为1，则会拒绝这条指令。
 
-<img src="/Users/liuwenshuo/Documents/Notes/MIT6.s081/Lectures/image-20220414215946725.png" alt="image-20220414215946725" style="zoom:33%;" />
+<img src="/Users/liuwenshuo/Documents/Notes/6.s801/Lectures/image-20220414215946725.png" alt="image-20220414215946725" style="zoom:33%;" />
 
 如上图所示，我们认为用户态/内核态就是分隔用户空间和内核空间的边界。用户空间运行的程序运行在user mode，内核的运行在kernel mode。OS位于内核空间，因此拥有kernel mode的控制权。
 
@@ -62,6 +62,6 @@ OS要保证每个进程拥有不重合的物理内存。这样就保证了**应�
 
   * OS模块之间的通信时，由于这些模块的一部分是在用户态实现的，会导致多次的用户控件<->内核空间的切换。因此有**反复跳转带来的性能损耗**。（图中通过shell进行系统调用，值返回给FS的流程）
 
-    ![img](/Users/liuwenshuo/Documents/Notes/MIT6.s081/Lectures/assets%252F-MHZoT2b_bcLghjAOPsJ%252F-MJbSdGiMLB2VO1kFUtK%252F-MJbcOEEsVLZivNXiWaO%252Fimage.png)
+    ![assets%2F-MHZoT2b_bcLghjAOPsJ%2F-MJbSdGiMLB2VO1kFUtK%2F-MJbcOEEsVLZivNXiWaO%2Fimage](/Users/liuwenshuo/Documents/Notes/6.s801/Lectures/assets%252F-MHZoT2b_bcLghjAOPsJ%252F-MJbSdGiMLB2VO1kFUtK%252F-MJbcOEEsVLZivNXiWaO%252Fimage.png)
 
   * 宏内核的紧耦合系统下，各组成部分很容易互相共享page cache，性能较高；但微内核下由于各组成部分分离，很难得到高性能。

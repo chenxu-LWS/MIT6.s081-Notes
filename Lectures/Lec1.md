@@ -21,7 +21,7 @@
 
 ### 主流操作系统结构
 
-<img src="/Users/liuwenshuo/Documents/Notes/MIT6.s081/Lectures/OS%20Structure.png" alt="OS Structure" style="zoom: 33%;" />
+<img src="/Users/liuwenshuo/Documents/Notes/6.s801/Lectures/OS%20Structure.png" alt="OS Structure" style="zoom: 33%;" />
 
 ---
 
